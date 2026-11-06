@@ -8,7 +8,7 @@ Domyślne jądro Linuksa dostarczane przez Microsoft w usłudze WSL2 posiada wy�
 
 Niniejszy pakiet rozwiązuje ten problem poprzez:
 
-1\. Dostarczenie prekompilowanego jądra WSL2 (`bzImage`) z wbudowanym na stałe sterownikiem systemu plików Minix (`CONFIG\_MINIX\_FS=y`) oraz obsługą urządzeń pętli zwrotnej (`CONFIG\_BLK\_DEV\_LOOP=y`).
+1. Dostarczenie prekompilowanego jądra WSL2 (`bzImage`) z wbudowanym na stałe sterownikiem systemu plików Minix (`CONFIG\_MINIX\_FS=y`) oraz obsługą urządzeń pętli zwrotnej (`CONFIG\_BLK\_DEV\_LOOP=y`).
 
 2\. Dostarczenie gotowej do zaimportowania pseudodystrybucji Linuksa z preinstalowanym emulatorem \*\*QEMU\*\*, czystym obrazem dysku \*\*Minix 2.0.3\*\*, wyodrębnionym drzewem źródeł pod \*\*VS Code\*\* (`\~/minix/workspace`) oraz zestawem komend automatyzujących pracę (`minix-run`, `minix-sync`, `minix-reset`).
 
