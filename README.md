@@ -1,18 +1,10 @@
-\# Środowisko SOI-Minix dla WSL2 (Windows 10 / 11)
-
-
+# Środowisko SOI-Minix dla WSL2 (Windows 10 / 11)
 
 Gotowe, zautomatyzowane środowisko laboratoryjne do przedmiotu \*\*Systemy Operacyjne (SOI.B)\*\* pozwalające na wygodną pracę z systemem \*\*Minix 2.0.3\*\* bezpośrednio pod \*\*WSL2\*\* oraz edycję kodu źródłowego w \*\*Visual Studio Code\*\* na systemie Windows.
 
-
-
-\## Dlaczego powstało to rozwiązanie?
-
-
+## Dlaczego powstało to rozwiązanie?
 
 Domyślne jądro Linuksa dostarczane przez Microsoft w usłudze WSL2 posiada wyłączoną obsługę systemu plików Minixa (`# CONFIG\_MINIX\_FS is not set`). Uniemożliwia to bezpośrednie montowanie obrazu dysku `minix203.img` wewnątrz WSL2 i zmusza studentów do korzystania z pełnych maszyn wirtualnych (VMware/VirtualBox) oraz przesyłania plików przez przestarzałe serwery FTP/SSH.
-
-
 
 Niniejszy pakiet rozwiązuje ten problem poprzez:
 
