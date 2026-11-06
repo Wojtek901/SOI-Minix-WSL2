@@ -1,0 +1,36 @@
+#!/bin/bash
+set -e
+
+# 1. Sprawdzenie limitu 14 znakow w nazwach plikow i katalogow
+ZA_DLUGIE=$(find ~/minix/workspace -mindepth 1 -name '???????????????*')
+
+if [ -n "$ZA_DLUGIE" ]; then
+    echo "=================================================================="
+    echo "[BLAD] System plikow Minix 2.0.3 obsluguje nazwy do MAX 14 znakow!"
+    echo "Nastepujace pliki lub katalogi maja za dluga nazwe:"
+    echo ""
+    for plik in $ZA_DLUGIE; do
+        nazwa=$(basename "$plik")
+        dlugosc=${#nazwa}
+        echo "  -> $nazwa ($dlugosc znakow) w: $plik"
+    done
+    echo ""
+    echo "Skroc powyzsze nazwy (do max 14 znakow) i uruchom komende ponownie."
+    echo "=================================================================="
+    exit 1
+fi
+
+# 2. Bezpieczne montowanie i synchronizacja
+if mountpoint -q ~/minix/mnt; then
+    sudo umount ~/minix/mnt
+fi
+
+sudo mount -t minix -o loop,offset=1483776 ~/minix/minix203.img ~/minix/mnt
+sudo rsync -rt --inplace ~/minix/workspace/src/ ~/minix/mnt/src/
+sudo rsync -rt --inplace ~/minix/workspace/include/ ~/minix/mnt/include/
+sudo mkdir -p ~/minix/mnt/my_tests
+sudo rsync -rt --inplace ~/minix/workspace/my_tests/ ~/minix/mnt/my_tests/
+sync
+sudo umount ~/minix/mnt
+
+echo "[OK] Pliki poprawnie zsynchronizowane z obrazem minix203.img."

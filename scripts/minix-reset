@@ -1,0 +1,6 @@
+#!/bin/bash
+if mountpoint -q ~/minix/mnt; then
+    sudo umount ~/minix/mnt
+fi
+cp ~/minix/backup/minix203_clean.img ~/minix/minix203.img
+echo "[OK] Przywrocono czysty obraz minix203.img (kod w ~/minix/workspace pozostal zachowany)."

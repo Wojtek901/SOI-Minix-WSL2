@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+minix-sync
+echo "[INFO] Uruchamianie emulatora QEMU..."
+qemu-system-x86_64 -hda ~/minix/minix203.img
