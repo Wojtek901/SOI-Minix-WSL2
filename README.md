@@ -59,7 +59,7 @@ W sekcji **Releases** dostępne są dwa warianty systemu bazowego. Oba oferują 
    * utworzy plik `%USERPROFILE%\.wslconfig` (jeśli posiadałeś wcześniej własny plik `.wslconfig`, instalator zachowa jego kopię jako `.wslconfig.bak`),
    * zaimportuje wybraną pseudodystrybucję pod nazwą `SOI-Minix-Debian` lub `SOI-Minix-Ubuntu`.
 
-## Codzienna praca ze środowiskiem (Workflow laboratoryjny)
+## Codzienna praca ze środowiskiem
 
 ### 1. Uruchomienie terminala i otwarcie kodu w VS Code
 
