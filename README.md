@@ -21,7 +21,7 @@ W sekcji **Releases** dostępne są dwa warianty systemu bazowego. Oba oferują 
 
 *Wystarczy pobrać **jeden** wybrany obraz `.tar.gz` (lub oba, jeśli chcesz przetestować każdy z nich – instalator wyświetli menu wyboru).*
 
-## Instrukcja instalacji krok po kroku (dla początkujących)
+## Instrukcja instalacji krok po kroku
 
 ### Krok 1: Wymagania wstępne na czystym Windows 10 / 11
 
